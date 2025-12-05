@@ -2,14 +2,14 @@
 """
 Created on Tue Dec  2 08:45:42 2025
 
-@author: Vergi
+@author: Vergil
 """
 
 import glob
 import os
 import pandas as pd 
 import xml.etree.ElementTree as ET
-from datetime import datetime
+import logging
 
 #initiate
 folder = "C:/Users/Vergi/.spyder-py3/ETL Files/ETL Practice"
@@ -17,13 +17,17 @@ headers = ["model","year_of_manufacture","price","fuel_type"]
 target_file = "extracted_data.csv"
 log_file = "log_file.txt"
 
+#Setup Logging
+logging.basicConfig(
+    filename=log_file,
+    level=logging.INFO,
+    format='%(asctime)s | %(message)s',
+    datefmt='%Y-%h-%d %H:%M:%S'
+    )
+
 #log Progress
 def log_progress(message):
-    timestamp_format = "%Y-%h-%d %H:%M:%S"
-    now = datetime.now()
-    timestamp = now.strftime(timestamp_format)
-    with open(log_file, "a") as f:
-        f.write(f"{timestamp} | {message}\n")
+    logging.info(message)
 
 #extract
 def extract_from_csv(file_to_process):

@@ -1,0 +1,8 @@
+2025-Dec-04 17:37:05 | ETL JOB Started
+2025-Dec-04 17:37:05 | Extraction phase started
+2025-Dec-04 17:37:05 | Extraction phase ended
+2025-Dec-04 17:37:05 | Transform phase started
+2025-Dec-04 17:37:05 | Transform phase ended
+2025-Dec-04 17:37:05 | loading phase started
+2025-Dec-04 17:37:05 | Loading phase ended
+2025-Dec-04 17:37:05 | ETL job finished
